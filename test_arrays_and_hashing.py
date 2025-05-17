@@ -10,11 +10,19 @@ class TestArraysAndHashing(unittest.TestCase):
     def setUp(self):
         self.solver = ArraysAndHashing()
     
+    # contains duplicates
     def test_contains_duplicate_true(self):
         self.assertTrue(self.solver.contains_duplicate([1, 2, 3, 1]))
 
     def test_contains_duplicate_false(self):
         self.assertFalse(self.solver.contains_duplicate([1, 2, 3, 4]))
+
+    #valid anagrams
+    def test_valid_anagram_true(self):
+        self.assertTrue(self.solver.isAnagram("racecar", "carrace"))
+
+    def test_valid_anagram_false(self):
+        self.assertFalse(self.solver.isAnagram("jar", "jam"))
 
 if __name__ == '__main__':
     unittest.main()

@@ -12,3 +12,17 @@ class ArraysAndHashing():
             else:
                 mySet.add(num)
         return False
+    
+    def isAnagram(self, s: str, t: str) -> bool:
+        countS, countT = {}, {}
+
+        if len(countS) != len(countT):
+            return False
+        
+        for i in range(len(s)):
+            countS[s[i]] = 1 + countS.get(s[i], 0)
+            countT[t[i]] = 1 + countT.get(t[i], 0)
+        
+        if countS != countT:
+            return False
+        return True
