@@ -29,5 +29,10 @@ class TestArraysAndHashing(unittest.TestCase):
         result = self.solver.twoSum([2, 7, 11, 15], 9)
         self.assertEqual(sorted(result), [0,1])
 
+    #group anagrams
+    def test_group_anagrams(self):
+        result = self.solver.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
+        self.assertEqual(result, [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']])
+
 if __name__ == '__main__':
     unittest.main()

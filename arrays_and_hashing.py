@@ -37,3 +37,16 @@ class ArraysAndHashing():
                 return [previousNums[diff], i]
             else:
                 previousNums[n] = i
+
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        groups = {}
+
+        for i, n in enumerate(strs):
+            sortedStr = "".join(sorted(n))
+
+            if sortedStr in groups:
+                groups[sortedStr].append(n)
+            else:
+                groups[sortedStr] = [n]
+        
+        return list(groups.values())
