@@ -50,3 +50,16 @@ class ArraysAndHashing():
                 groups[sortedStr] = [n]
         
         return list(groups.values())
+    
+    def topKFrequentItems(self, strs: List[str], k: int) -> List[int]:
+        counts = {}
+
+        for i, n in enumerate(strs):
+            if n in counts:
+                counts[n] = counts[n] + 1
+            else:
+                counts[n] = 1
+        
+        sortedCounts = sorted(counts, key=counts.get)
+        
+        return sortedCounts[-k:]

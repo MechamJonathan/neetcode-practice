@@ -29,10 +29,15 @@ class TestArraysAndHashing(unittest.TestCase):
         result = self.solver.twoSum([2, 7, 11, 15], 9)
         self.assertEqual(sorted(result), [0,1])
 
-    #group anagrams
+    # group anagrams
     def test_group_anagrams(self):
         result = self.solver.groupAnagrams(["eat","tea","tan","ate","nat","bat"])
         self.assertEqual(result, [['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']])
+
+    # top k frequent items
+    def test_top_k_frequent_items(self):
+        result = self.solver.topKFrequentItems([1,2,2,3,3,3], 2)
+        self.assertEqual(result, [2,3])
 
 if __name__ == '__main__':
     unittest.main()
