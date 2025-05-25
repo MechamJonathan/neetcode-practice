@@ -1,7 +1,6 @@
 
 from typing import List
 
-
 class ArraysAndHashing():
     def contains_duplicate(self, nums: List[int]) -> bool:
         mySet = set()
