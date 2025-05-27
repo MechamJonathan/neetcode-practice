@@ -12,7 +12,6 @@ class ArraysAndHashing():
                 mySet.add(num)
         return False
     
-    
     def isAnagram(self, s: str, t: str) -> bool:
         countS, countT = {}, {}
 
