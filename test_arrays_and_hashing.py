@@ -39,5 +39,9 @@ class TestArraysAndHashing(unittest.TestCase):
         result = self.solver.topKFrequentItems([1,2,2,3,3,3], 2)
         self.assertEqual(result, [2,3])
 
+
+    def test_is_palindrome(self):
+        self.assertTrue(self.solver.isPalindrome("Was it a car or a cat I saw?"), True)
+
 if __name__ == '__main__':
     unittest.main()
