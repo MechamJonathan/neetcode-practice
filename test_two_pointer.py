@@ -11,6 +11,9 @@ class TestArraysAndHashing(unittest.TestCase):
     
     def test_two_pointer_II(self):
         self.assertEqual(self.solver.twoSumII([1,2,3,4], 3), [1,2])
+    
+    def test_three_sum(self):
+        self.assertEqual(self.solver.threeSum([-1,0,1,2,-1,-4]), [[-1,-1,2],[-1,0,1]])
 
 
 if __name__ == '__main__':
