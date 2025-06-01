@@ -42,9 +42,18 @@ class TwoPointer():
                 threeSum = n + nums[l] + nums[r]
 
                 if threeSum == 0:
-                    result.append([n, nums[l], nums[r]])
+                    result.append([n, nums[l], nums[r]]) # found a triplet! Add it to the result
+                    # We are looking for multiple solutions in this problem, so move the pointers so we can continue
                     l += 1
                     r -= 1
+
+                    # This is the duplicate-skip logic for the left pointer. After incrementing
+                    # l, we could encounter the exact same number, which would just add the same 
+                    # triplet. 
+                    # First we check if nums[l] is equal to the num before it.
+                    # checking l<r confirms their is still nums to view, otherwise we've done them
+                    # all and need to move on
+                        
                     while nums[l] == nums[l - 1] and l < r:
                         l += 1
                 elif threeSum > 0:
