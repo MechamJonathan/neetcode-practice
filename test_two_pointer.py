@@ -15,6 +15,8 @@ class TestArraysAndHashing(unittest.TestCase):
     def test_three_sum(self):
         self.assertEqual(self.solver.threeSum([-1,0,1,2,-1,-4]), [[-1,-1,2],[-1,0,1]])
 
+    def test_max_area(self):
+        self.assertEqual(self.solver.maxArea([1,7,2,5,4,7,3,6]), 36)
 
 if __name__ == '__main__':
     unittest.main()
