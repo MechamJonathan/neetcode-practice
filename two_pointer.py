@@ -33,7 +33,8 @@ class TwoPointer():
         nums.sort()
 
         for i, n in enumerate(nums):
-            if i > 0 and n == nums[i - 1]:
+            if i > 0 and n == nums[i - 1]: # the i > 0 is so we can safely check the next part of the conditional.
+                                           # so we don't compare nums[-1] (the last number) by accident
                 continue
                 
             l, r = i + 1, len(nums) - 1
