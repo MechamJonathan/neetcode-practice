@@ -17,6 +17,9 @@ class TestArraysAndHashing(unittest.TestCase):
 
     def test_max_area(self):
         self.assertEqual(self.solver.maxArea([1,7,2,5,4,7,3,6]), 36)
+    
+    def test_trap(self):
+        self.assertEqual(self.solver.trap([0,2,0,3,1,0,1,3,2,1]), 9)
 
 if __name__ == '__main__':
     unittest.main()
