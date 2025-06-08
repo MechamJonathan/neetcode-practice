@@ -14,7 +14,4 @@ class Stacks():
             else:
                 stack.append(c)
         
-        if len(stack) != 0:
-            return False
-        else:
-            return True
+        return True if len(stack) == 0 else False 
