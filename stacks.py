@@ -6,6 +6,7 @@ class Stacks():
         closeToOpen = {"}":"{", "]":"[", ")":"("}
 
         for c in s:
+            
             if c in closeToOpen:
                 if len(stack) != 0 and stack[-1] == closeToOpen[c]:
                     stack.pop()
@@ -18,4 +19,6 @@ class Stacks():
             return True
         else:
             return False
+
+    
         
