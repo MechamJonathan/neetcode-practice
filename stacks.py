@@ -19,6 +19,24 @@ class Stacks():
             return True
         else:
             return False
+        
+    def evalRPN(self, tokens: list[str]) -> int:
+        stack = []
+
+        for t in tokens:
+            if t == "+":
+                stack.append(stack.pop() + stack.pop())
+            elif t == "-":
+                a, b = stack.pop(), stack.pop()
+                stack.append(b - a)
+            elif t == "*":
+                stack.append(stack.pop() * stack.pop())
+            elif t == "/":
+                a, b = stack.pop(), stack.pop()
+                stack.append(int(b/a))
+            else:
+                stack.append(int(t))
+        return stack.pop()
 
     
         
