@@ -61,6 +61,7 @@ class TwoPointer():
                     r -= 1
                 elif threeSum < 0:
                     l += 1
+                    
         return result
     
     def maxArea(self, heights: List[int]) -> int:
