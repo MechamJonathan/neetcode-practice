@@ -19,6 +19,5 @@ class TestBinarySearch(unittest.TestCase):
         target = 3
         self.assertTrue(self.solver.search_matrix(matrix, target), 3)
 
-
 if __name__ == '__main__':
     unittest.main()
