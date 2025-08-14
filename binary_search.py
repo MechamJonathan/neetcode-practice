@@ -36,5 +36,6 @@ class BinarySearch():
                 low = median + 1
             else:
                 high = median - 1
+                
         return False
         
