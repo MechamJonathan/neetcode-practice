@@ -19,5 +19,10 @@ class TestBinarySearch(unittest.TestCase):
         target = 3
         self.assertTrue(self.solver.search_matrix(matrix, target), 3)
 
+    def test_search_sorted_array(self):
+        nums=[3,4,5,6,1,2]
+        target=1
+        self.assertTrue(self.solver.search_sorted_array(nums, target), 4)
+
 if __name__ == '__main__':
     unittest.main()
