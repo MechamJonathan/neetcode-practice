@@ -44,7 +44,6 @@ class BinarySearch():
 
         while l <= r:
             m = (l + r) // 2
-
             if nums[m] == target:
                 return m
             
