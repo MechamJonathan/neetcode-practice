@@ -61,5 +61,6 @@ class ArraysAndHashing():
                 counts[n] = 1
         
         sortedCounts = sorted(counts, key=counts.get)
+        
         return sortedCounts[-k:]
 
